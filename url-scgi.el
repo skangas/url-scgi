@@ -6,6 +6,7 @@
 ;; Version: 0.6
 ;; Keywords: comm, data, processes, scgi
 ;; Package-Requires: ((cl-lib "0.5"))
+;; SPDX-License-Identifier: GPL-3.0-or-later
 
 ;; This file is NOT part of GNU Emacs.
 
