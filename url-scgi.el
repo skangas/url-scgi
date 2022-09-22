@@ -1,6 +1,6 @@
-;;; url-scgi.el --- SCGI Uniform Resource Locator retrieval code  -*- lexical-binding: t -*-
+;;; url-scgi.el --- SCGI support for url.el  -*- lexical-binding: t -*-
 
-;; Copyright (C) 2011-2022 Stefan Kangas.
+;; Copyright (C) 2011-2022 Stefan Kangas <stefankangas@gmail.com>
 
 ;; Author: Stefan Kangas <stefankangas@gmail.com>
 ;; Version: 0.6
@@ -24,11 +24,16 @@
 
 ;;; Commentary:
 
-;; Support for SCGI URLs.
+;; Support for SCGI URLs in Emacs, with url.el.
 ;;
 ;; The SCGI specification document can be found at:
 ;;
-;; https://python.ca/scgi/protocol.txt
+;;     https://python.ca/scgi/protocol.txt
+;;
+;; Usage, with xml-rpc.el:
+;;
+;;     (require 'url-scgi)
+;;     (xml-rpc-method-call "scgi://localhost:5000" "some.method")
 ;;
 ;; This is heavily based on the url-http.el library.
 

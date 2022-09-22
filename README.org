@@ -1,0 +1,32 @@
+#+TITLE:  url-scgi.el
+#+DATE:   2022-09-22
+#+AUTHOR: Stefan Kangas <stefankangas@gmail.com>
+
+This library add support for SCGI URLs to Emacs.  It is based on url.el, which
+is shipped with Emacs.
+
+The SCGI specification is available [[https://python.ca/scgi/protocol.txt][here]].  There is [[file:doc/scgi-protocol.txt][a copy]] in this repository.
+
+* Installation
+
+url-scgi.el is available on [[https://elpa.gnu.org/][GNU ELPA]], which is enabled by default in Emacs.
+
+Find and install url-sgi.el using this command:
+
+: M-x list-packages
+
+* Usage
+
+ Usage, with xml-rpc.el:
+
+: (require 'url-scgi)
+: (xml-rpc-method-call "scgi://localhost:5000" "some.method")
+
+* Contact
+
+You can find the latest version of url-scgi.el here:
+
+https://www.github.com/skangas/url-scgi
+
+Bug reports, comments, and suggestions are welcome! Send them to Stefan Kangas
+<stefankangas@gmail.com> or report them on GitHub.
