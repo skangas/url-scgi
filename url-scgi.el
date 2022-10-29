@@ -3,7 +3,7 @@
 ;; Copyright (C) 2011-2022 Free Software Foundation, Inc.
 
 ;; Author: Stefan Kangas <stefankangas@gmail.com>
-;; Version: 0.6
+;; Version: 0.7
 ;; Keywords: comm, data, processes, scgi
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/skangas/url-scgi/
@@ -39,6 +39,8 @@
 
 ;;; Change Log:
 
+;; 0.7 - Release on GNU ELPA
+
 ;; 0.6 - Documentation fixes
 
 ;; 0.5 - Fix using file socket on Emacs 25
@@ -56,9 +58,6 @@
 
 (require 'cl-lib)
 (require 'url-parse)
-
-(defvar url-scgi-version "0.6"
-  "The version of scgi that you're using.")
 
 (defvar url-scgi-connection-opened)
 
