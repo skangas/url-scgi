@@ -1,6 +1,6 @@
 ;;; url-scgi.el --- SCGI support for url.el  -*- lexical-binding: t -*-
 
-;; Copyright (C) 2011-2022 Stefan Kangas <stefankangas@gmail.com>
+;; Copyright (C) 2011-2022 Free Software Foundation, Inc.
 
 ;; Author: Stefan Kangas <stefankangas@gmail.com>
 ;; Version: 0.6
@@ -9,9 +9,7 @@
 ;; URL: https://github.com/skangas/url-scgi/
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
-;; This file is NOT part of GNU Emacs.
-
-;; This program is free software: you can redistribute it and/or modify
+;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
 ;; (at your option) any later version.
