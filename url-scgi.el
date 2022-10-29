@@ -74,7 +74,7 @@
   (format "%d:%s," (length str) str))
 
 (defun url-scgi-add-null-bytes (&rest args)
-  (mapconcat (lambda (a) (concat a "\000")) args))
+  (mapconcat (lambda (a) (concat a "\000")) args ""))
 
 (defun url-scgi-make-request-header (data)
   (url-scgi-string-to-netstring
