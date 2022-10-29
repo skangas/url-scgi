@@ -3,7 +3,7 @@
 ;; Copyright (C) 2011-2022 Free Software Foundation, Inc.
 
 ;; Author: Stefan Kangas <stefankangas@gmail.com>
-;; Version: 0.7
+;; Version: 0.8
 ;; Keywords: comm, data, processes, scgi
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/skangas/url-scgi/
@@ -38,6 +38,8 @@
 ;; This is heavily based on the url-http.el library.
 
 ;;; Change Log:
+
+;; 0.8 - Fix bug in `url-scgi-add-null-bytes'
 
 ;; 0.7 - Release on GNU ELPA
 
