@@ -10,7 +10,12 @@ TARGET=$(patsubst %.el,%.elc,$(wildcard *.el))
 all: $(TARGET)
 
 %.elc: %.el
-	$(EMACS_LOAD) -f batch-byte-compile $<
+	@echo "Compiling $<"
+	@$(EMACS_LOAD) -f batch-byte-compile $<
+
+check-declare:
+	@$(EMACS_LOAD) --eval '(check-declare-file "url-scgi.el")'
+	@$(EMACS_LOAD) --eval '(check-declare-file "url-scgi-tests.el")'
 
 clean:
 	rm -f $(TARGET) TAGS
@@ -18,5 +23,5 @@ clean:
 tags:
 	etags url-scgi.el
 
-test:
-	$(EMACS_LOAD) -l url-scgi-tests.el -f ert-run-tests-batch-and-exit
+test: all check-declare
+	@$(EMACS_LOAD) -l url-scgi-tests.el -f ert-run-tests-batch-and-exit
