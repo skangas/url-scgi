@@ -4,7 +4,7 @@ EMACS_LOADPATH = -L .
 EMACS_LOAD = $(EMACS_BATCH) $(EMACS_LOADPATH)
 TARGET=$(patsubst %.el,%.elc,$(wildcard *.el))
 
-.PHONY: all clean tags test
+.PHONY: all clean tags test check-declare
 .PRECIOUS: %.elc
 
 all: $(TARGET)
