@@ -1,5 +1,6 @@
 name: test
 on: [ push, pull_request ]
+permissions: {}
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -20,7 +21,9 @@ jobs:
 
     steps:
     - name: Checkout url-scgi
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+      with:
+        persist-credentials: false
 
     - name: Install emacs
       uses: purcell/setup-emacs@master
