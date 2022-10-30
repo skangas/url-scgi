@@ -2,6 +2,8 @@
 #+DATE:   2022-09-22
 #+AUTHOR: Stefan Kangas <stefankangas@gmail.com>
 
+[[https://elpa.gnu.org/packages/url-scgi.html][https://elpa.gnu.org/packages/url-scgi.svg]]
+
 This library add support for SCGI URLs to Emacs.  It is based on url.el, which
 is shipped with Emacs.
 
