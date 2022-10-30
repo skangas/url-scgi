@@ -37,6 +37,9 @@
 ;;
 ;; This is heavily based on the url-http.el library.
 
+;; Bug reports, comments, and suggestions are welcome!  Send them to
+;; Stefan Kangas <stefankangas@gmail.com> or report them on GitHub.
+
 ;;; Change Log:
 
 ;; 0.8 - Fix bug in `url-scgi-add-null-bytes'
