@@ -5,7 +5,7 @@
 ;; Author: Stefan Kangas <stefankangas@gmail.com>
 ;; Version: 0.8
 ;; Keywords: comm, data, processes, scgi
-;; Package-Requires: ((emacs "25.1"))
+;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/skangas/url-scgi/
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
