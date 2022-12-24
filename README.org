@@ -7,11 +7,27 @@
 This library add support for SCGI URLs to Emacs.  It is based on url.el, which
 is shipped with Emacs.
 
-The SCGI specification is available [[https://python.ca/scgi/protocol.txt][here]].  There is [[file:doc/scgi-protocol.txt][a copy]] in this repository.
+The SCGI protocol is intended as a replacement for the older CGI protocol, and
+is comparable to FastCGI or WAI, but much simpler.  Thus, the SCGI protocol is
+most often used by web servers to communicate with a program that serves
+dynamically generated pages and files (instead of just static ones).  SCGI is
+supported in web servers such as Apache, lighttpd, and nginx.
 
-** Installation
+This library effectively makes Emacs take the place of a web server.  This can
+be useful for testing, but not only that.  It was originally developed for
+[[https://www.github.com/skangas/mentor][Mentor]], an Emacs front-end for the BitTorrent client ~rtorrent~, where it is
+used for remote procedure calls (RPC).
 
-url-scgi.el is available on [[https://elpa.gnu.org/][GNU ELPA]], which is enabled by default in Emacs.
+SCGI is described in more detail on [[https://en.wikipedia.org/wiki/Simple_Common_Gateway_Interface][Wikipedia]].  As far as I know, there is no
+RFC describing SCGI, nor is there any formal specification.  On the other hand,
+the protocol is very simple; it is described in detail [[https://python.ca/scgi/protocol.txt][here]].
+
+SCGI URLs look like this: ~scgi://<host>:<port>~.  See below for an example.
+
+* Installation
+
+url-scgi.el can be installed from [[https://elpa.gnu.org/][GNU ELPA]], an Emacs Lisp package archive that
+is enabled by default in Emacs.
 
 Find and install url-sgi.el using this command:
 
@@ -19,10 +35,32 @@ Find and install url-sgi.el using this command:
 
 ** Usage
 
-Usage, with ~xml-rpc.el~:
+First, require ~url-scgi~:
 
 : (require 'url-scgi)
-: (xml-rpc-method-call "scgi://localhost:5000" "some.method")
+
+Now, to make an SCGI request with ~url-scgi~, simply call ~url-retrieve~ or
+~url-retrieve-synchronously~ with a URL starting with ~scgi://~.
+
+For example, let's assume you have some program listening for SCGI requests on
+~localhost~ port ~5000~.  You can then issue a request containing the string
+~some-data~ with:
+
+: (url-retrieve-synchronously "scgi://localhost:5000/some-data")
+
+You will want to replace ~some-data~ with something relevant to the program you
+are talking to.  Please refer to its documentation for details.
+
+If your application supports XML-RPC (remote procedure calls) over SCGI, you can
+make such calls using ~url-scgi~ with the ~xml-rpc~ package.  For example, if
+your program supports an XML-RPC method named ~foo~, you would call it like
+so:
+
+: (require 'url-scgi)
+: (require 'xml-rpc)
+: (xml-rpc-method-call "scgi://localhost:5000" "foo")
+
+For more, see the documentation of the ~xml-rpc~ package.
 
 ** Contribute
 
@@ -38,5 +76,5 @@ You can find the latest version of url-scgi.el here:
 
 https://www.github.com/skangas/url-scgi
 
-Bug reports, comments, and suggestions are welcome! Send them to Stefan Kangas
+Bug reports, comments, and suggestions are welcome!  Email them to Stefan Kangas
 <stefankangas@gmail.com> or report them on GitHub.
