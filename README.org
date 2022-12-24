@@ -24,6 +24,8 @@ the protocol is very simple; it is described in detail [[https://python.ca/scgi/
 
 SCGI URLs look like this: ~scgi://<host>:<port>~.  See below for an example.
 
+aginst
+
 * Installation
 
 url-scgi.el can be installed from [[https://elpa.gnu.org/][GNU ELPA]], an Emacs Lisp package archive that
