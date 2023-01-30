@@ -1,11 +1,11 @@
 #+TITLE:  url-scgi.el
-#+DATE:   2022-09-22
+#+DATE:   2023-01-30
 #+AUTHOR: Stefan Kangas <stefankangas@gmail.com>
 
 [[https://elpa.gnu.org/packages/url-scgi.html][https://elpa.gnu.org/packages/url-scgi.svg]]
 
-This library add support for SCGI URLs to Emacs.  It is based on url.el, which
-is shipped with Emacs.
+This library adds support for Simple Common Gateway Interface (SCGI) URLs to the
+built-in Emacs ~url~ library.
 
 The SCGI protocol is intended as a replacement for the older CGI protocol, and
 is comparable to FastCGI or WAI, but much simpler.  Thus, the SCGI protocol is
