@@ -3,7 +3,7 @@
 ;; Copyright (C) 2011-2023 Free Software Foundation, Inc.
 
 ;; Author: Stefan Kangas <stefankangas@gmail.com>
-;; Version: 0.8
+;; Version: 0.9
 ;; Keywords: comm, data, processes, scgi
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/skangas/url-scgi/
@@ -41,6 +41,8 @@
 ;; Stefan Kangas <stefankangas@gmail.com> or report them on GitHub.
 
 ;;; Change Log:
+
+;; 0.9 - Re-add support for Emacs 24.3
 
 ;; 0.8 - Fix bug in `url-scgi-add-null-bytes'
 
