@@ -114,11 +114,6 @@ an updated value of CBARGS as arguments."
   (if (>= emacs-major-version 26)
       (cl-check-type url url "Need a pre-parsed URL.")
     (cl-check-type url vector "Need a pre-parsed URL."))
-  ;; (declare (special url-scgi-connection-opened
-  ;;                   url-callback-function
-  ;;                   url-callback-arguments
-  ;;                   url-current-object))
-
   (let* ((host (url-host url))
          (port (url-port url))
          (filename (url-filename url))
